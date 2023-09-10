@@ -40,3 +40,20 @@ git config --global core.editor vim
 ## 顯卡驅動
 [資料a](https://www.tokfun.net/os/linux/linux-ubuntu-install-remove-nvidia-driver/)
 [關閉顯卡的方法](https://clay-atlas.com/blog/2020/03/04/nvidia-chinese-note-how-to-disable-drm/)
+
+## 性能的測試
+
+### sysbench
+[參考資料](https://github.com/akopytov/sysbench)
+
+#### CPU 性能测试
+
+```sh
+sysbench cpu --cpu-max-prime=20000 run
+```
+
+#### 内存性能测试
+
+```py
+sysbench memory --memory-block-size=1M --memory-total-size=10G run
+```
